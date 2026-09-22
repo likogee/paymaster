@@ -4174,7 +4174,7 @@
     // After unlock, if not standalone, show install overlay
     const _hideLockOriginal2 = hideLockScreen;
     hideLockScreen = function() {
-      _hideLockOriginal2();
+      _hideLockOriginal2();    
       setTimeout(() => {
         if (!isStandalone() && !localStorage.getItem('pmInstallSkipped')) {
           showInstallOverlay();
