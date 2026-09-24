@@ -2,71 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
   <title>PayMaster • Hire Purchase Tracker</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232a6e3f'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3E💼%3C/text%3E%3C/svg%3E" />
-
-  <!-- ============================================================
-       PWA MANIFEST
-       ============================================================ -->
-  <link rel="manifest" href='data:application/manifest+json,{
-    "name": "PayMaster • Hire Purchase Tracker",
-    "short_name": "PayMaster",
-    "description": "Track hire purchase agreements, payments, and balances with PDF reports, cloud backup, and recovery codes.",
-    "start_url": "./?source=pwa",
-    "scope": "./",
-    "display": "standalone",
-    "display_override": ["standalone", "fullscreen", "minimal-ui"],
-    "orientation": "portrait",
-    "background_color": "#0a1a2b",
-    "theme_color": "#1a7a4a",
-    "lang": "en",
-    "dir": "ltr",
-    "categories": ["business", "finance", "productivity"],
-    "icons": [
-      {
-        "src": "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 192 192%27%3E%3Crect width=%27192%27 height=%27192%27 rx=%2738%27 fill=%27%231a7a4a%27/%3E%3Ctext x=%2796%27 y=%27130%27 font-size=%2796%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27Arial%27%3E💼%3C/text%3E%3C/svg%3E",
-        "sizes": "192x192",
-        "type": "image/svg+xml",
-        "purpose": "any"
-      },
-      {
-        "src": "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 512 512%27%3E%3Crect width=%27512%27 height=%27512%27 rx=%27100%27 fill=%27%231a7a4a%27/%3E%3Ctext x=%27256%27 y=%27346%27 font-size=%27256%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27Arial%27%3E💼%3C/text%3E%3C/svg%3E",
-        "sizes": "512x512",
-        "type": "image/svg+xml",
-        "purpose": "any maskable"
-      }
-    ],
-    "shortcuts": [
-      {
-        "name": "Add Payment",
-        "short_name": "Payment",
-        "description": "Quickly add a new payment record",
-        "url": "./?section=payment",
-        "icons": [{"src": "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2720%27 fill=%27%231a7a4a%27/%3E%3Ctext x=%2750%27 y=%2768%27 font-size=%2750%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27Arial%27%3E💳%3C/text%3E%3C/svg%3E", "sizes": "any", "type": "image/svg+xml"}]
-      },
-      {
-        "name": "Payment History",
-        "short_name": "History",
-        "description": "View your payment history",
-        "url": "./?section=history",
-        "icons": [{"src": "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2720%27 fill=%27%231a7a4a%27/%3E%3Ctext x=%2750%27 y=%2768%27 font-size=%2750%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27Arial%27%3E📜%3C/text%3E%3C/svg%3E", "sizes": "any", "type": "image/svg+xml"}]
-      }
-    ],
-    "prefer_related_applications": false,
-    "launch_handler": { "client_mode": "navigate-existing" },
-    "handle_links": "preferred"
-  }' />
-
   <meta name="theme-color" content="#1a7a4a" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="PayMaster" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="application-name" content="PayMaster" />
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='38' fill='%231a7a4a'/%3E%3Ctext x='96' y='130' font-size='96' text-anchor='middle' fill='white' font-family='Arial'%3E💼%3C/text%3E%3C/svg%3E" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-TileColor" content="#1a7a4a" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="description" content="Track hire purchase agreements, payments, and balances with PDF reports, cloud backup, and recovery codes." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231a7a4a'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3E💼%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQyIiBmaWxsPSIjMWE3YTRhIi8+PHRleHQgeD0iOTYiIHk9IjEzMCIgZm9udC1zaXplPSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPvCfkrs8L3RleHQ+PC9zdmc+" />
 
-  <!-- Deferred Chart.js loading (non-blocking) -->
+  <!-- Faster DNS + TLS handshakes -->
+  <link rel="dns-prefetch" href="https://script.google.com" />
+  <link rel="preconnect" href="https://script.google.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://api.qrserver.com" crossorigin />
+
+  <!-- Deferred Chart.js loading -->
   <script>
     (function() {
       var s = document.createElement('script');
@@ -82,10 +39,9 @@
        ROOT VARIABLES & RESET
        ============================================================ */
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
     :root {
       --bg: #f0f4f9;
@@ -134,26 +90,25 @@
     body {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
+      text-rendering: optimizeSpeed;
       background: var(--bg);
       min-height: 100vh;
+      min-height: 100dvh;
       transition: background 0.3s, color 0.3s;
       overflow-x: hidden;
       -webkit-tap-highlight-color: transparent;
       padding-top: env(safe-area-inset-top, 0);
       padding-bottom: env(safe-area-inset-bottom, 0);
+      overscroll-behavior-y: contain;
     }
-    input, select, textarea {
-      user-select: auto; -webkit-user-select: text;
-    }
+    input, select, textarea { user-select: auto; -webkit-user-select: text; }
     ::selection { background: var(--gold); color: var(--text-primary); }
 
     /* ============================================================
-       STANDALONE MODE DETECTION
+       STANDALONE MODE
        ============================================================ */
     body.standalone-mode .pwa-install-overlay { display: none !important; }
 
-    /* PWA Install Overlay — shown when NOT in standalone mode */
     .pwa-install-overlay {
       position: fixed; inset: 0; z-index: 99999;
       background: radial-gradient(ellipse at 30% 20%, #0a1a2b, #050e1a 70%);
@@ -201,7 +156,6 @@
       box-shadow: 0 4px 32px rgba(26, 122, 74, 0.4);
       transition: transform 0.2s;
       letter-spacing: 0.3px;
-      -webkit-tap-highlight-color: transparent;
     }
     .pwa-install-box .pwa-install-cta:hover { transform: translateY(-2px); }
     .pwa-install-box .pwa-install-cta:active { transform: scale(0.97); }
@@ -210,9 +164,7 @@
       color: #8899b8; border-radius: 60px;
       padding: 10px 20px; font-size: 0.8rem; cursor: pointer;
       width: 100%; font-weight: 600;
-      -webkit-tap-highlight-color: transparent;
     }
-    .pwa-install-box .pwa-skip-btn:hover { background: rgba(255,255,255,0.03); color: #eef2ff; }
     .pwa-install-box .pwa-instructions {
       background: rgba(255,255,255,0.04);
       border-radius: 12px; padding: 12px 14px;
@@ -241,7 +193,6 @@
     .app-sidebar .logo {
       font-size: 1.8rem; margin-bottom: 20px; cursor: pointer;
       transition: var(--transition);
-      -webkit-user-select: none; user-select: none;
     }
     .sidebar-close-btn {
       position: absolute; top: 8px; right: 8px;
@@ -534,6 +485,7 @@
       padding: 10px 14px; font-size: 0.9rem;
       color: var(--text-primary); outline: none;
       transition: border-color 0.15s, box-shadow 0.15s;
+      -webkit-appearance: none; appearance: none;
     }
     input:focus, select:focus {
       border-color: var(--gold);
@@ -551,6 +503,7 @@
       margin-top: 8px; display: flex; align-items: center; justify-content: center;
       gap: 8px; transition: transform 0.15s, opacity 0.15s;
       letter-spacing: 0.2px; outline: none;
+      font-family: inherit;
     }
     button:hover { opacity: 0.92; }
     button:active { transform: scale(0.97); }
@@ -899,6 +852,7 @@
       font-size: 1rem; color: #fff; outline: none;
       transition: border-color 0.2s, box-shadow 0.2s;
       letter-spacing: 0.05em;
+      -webkit-appearance: none; appearance: none;
     }
     .lock-input::placeholder {
       color: rgba(255, 255, 255, 0.2);
@@ -933,6 +887,7 @@
       cursor: pointer; letter-spacing: 0.6px;
       box-shadow: 0 4px 32px rgba(26, 122, 74, 0.4);
       margin-bottom: 16px; outline: none;
+      font-family: inherit;
     }
     .lock-btn.loading { opacity: 0.7; pointer-events: none; }
     .lock-footer-links { display: flex; justify-content: center; gap: 24px; margin-top: 4px; }
@@ -941,6 +896,7 @@
       background: none; border: none; text-decoration: underline;
       padding: 4px 8px; margin: 0; width: auto;
       border-radius: 8px; outline: none;
+      font-family: inherit;
     }
     .lock-forgot { color: rgba(255, 100, 100, 0.25); }
     .lock-footer {
@@ -1067,7 +1023,7 @@
       color: #fff; padding: 6px 20px; border-radius: 40px;
       font-size: 0.75rem; font-weight: 700; text-decoration: none;
       border: none; cursor: pointer;
-      font-family: 'Inter', sans-serif;
+      font-family: inherit;
     }
     .flyer-carousel .carousel-dismiss {
       position: absolute; top: 12px; right: 16px;
@@ -1096,7 +1052,7 @@
     }
 
     /* ============================================================
-       FLOATING ACTION BUTTONS (WhatsApp + Share)
+       FLOATING ACTION BUTTONS
        ============================================================ */
     .floating-action-btn {
       position: fixed; right: 24px; z-index: 900;
@@ -1104,8 +1060,8 @@
       border-radius: 50%; cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
       outline: none; border: none;
-      -webkit-tap-highlight-color: transparent;
       will-change: transform;
+      font-family: inherit;
     }
     .floating-action-btn.hidden {
       opacity: 0 !important;
@@ -1113,8 +1069,6 @@
       transform: scale(0.6) !important;
       visibility: hidden;
     }
-
-    /* WhatsApp button */
     .whatsapp-float {
       bottom: 24px;
       width: 56px; height: 56px;
@@ -1122,22 +1076,12 @@
       color: #fff; font-size: 1.6rem;
       box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
     }
-    .whatsapp-float:hover {
-      transform: scale(1.08);
-      box-shadow: 0 8px 32px rgba(37, 211, 102, 0.55);
-    }
-
-    /* Share button */
     .share-float {
       bottom: 92px;
       width: 56px; height: 56px;
       background: var(--gold-gradient);
       color: #fff; font-size: 1.5rem;
       box-shadow: 0 6px 24px rgba(212, 140, 26, 0.4);
-    }
-    .share-float:hover {
-      transform: scale(1.08) rotate(15deg);
-      box-shadow: 0 8px 32px rgba(212, 140, 26, 0.6);
     }
 
     /* ============================================================
@@ -1221,6 +1165,7 @@
       margin: 0; width: 100%;
       outline: none; text-align: center;
       transition: transform 0.15s, background 0.15s, color 0.15s;
+      font-family: inherit;
     }
     .share-btn .share-icon { font-size: 1.4rem; line-height: 1; }
     .share-btn.whatsapp { color: #25D366; }
@@ -1282,7 +1227,7 @@
     }
 
     /* ============================================================
-       FLOATING ICONS TOGGLES (Settings)
+       FLOATING ICONS TOGGLES
        ============================================================ */
     .toggle-row {
       display: flex; align-items: center; justify-content: space-between;
@@ -1367,7 +1312,6 @@
       .share-btn .share-icon { font-size: 1.2rem; }
     }
 
-    /* Reduce animations for users who prefer reduced motion */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -1391,8 +1335,171 @@
 <body>
 
   <!-- ============================================================
-       PWA INSTALL OVERLAY (shown when NOT in standalone mode)
+       INLINE PWA MANIFEST — fullscreen native-app experience
+       (same technique as Keke Fare)
        ============================================================ -->
+  <script>
+    (function injectManifest() {
+      try {
+        const icon192 = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQyIiBmaWxsPSIjMWE3YTRhIi8+PHRleHQgeD0iOTYiIHk9IjEzMCIgZm9udC1zaXplPSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPvCfkrs8L3RleHQ+PC9zdmc+';
+        const icon512 = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMiIgZmlsbD0iIzFhN2E0YSIvPjx0ZXh0IHg9IjI1NiIgeT0iMzQwIiBmb250LXNpemU9IjI2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+8J+SuzwvdGV4dD48L3N2Zz4=';
+
+        const manifest = {
+          name: 'PayMaster • Hire Purchase Tracker',
+          short_name: 'PayMaster',
+          description: 'Track hire purchase agreements, payments, and balances with PDF reports, cloud backup, and recovery codes.',
+          start_url: '.',
+          scope: '.',
+          display: 'fullscreen',
+          display_override: ['fullscreen', 'standalone', 'minimal-ui'],
+          orientation: 'portrait',
+          background_color: '#0a1a2b',
+          theme_color: '#1a7a4a',
+          icons: [
+            { src: icon192, sizes: '192x192', type: 'image/svg+xml', purpose: 'any' },
+            { src: icon512, sizes: '512x512', type: 'image/svg+xml', purpose: 'any' },
+            { src: icon192, sizes: '192x192', type: 'image/svg+xml', purpose: 'maskable' },
+            { src: icon512, sizes: '512x512', type: 'image/svg+xml', purpose: 'maskable' }
+          ],
+          categories: ['business', 'finance', 'productivity'],
+          lang: 'en',
+          dir: 'ltr',
+          prefer_related_applications: false,
+          shortcuts: [
+            {
+              name: 'Add Payment',
+              short_name: 'Payment',
+              description: 'Quickly add a new payment record',
+              url: './?section=payment'
+            },
+            {
+              name: 'Payment History',
+              short_name: 'History',
+              description: 'View your payment history',
+              url: './?section=history'
+            },
+            {
+              name: 'Generate PDF',
+              short_name: 'PDF',
+              description: 'Generate a PDF report',
+              url: './?section=pdf'
+            }
+          ]
+        };
+
+        const blob = new Blob([JSON.stringify(manifest)], { type: 'application/manifest+json' });
+        const url = URL.createObjectURL(blob);
+
+        const link = document.createElement('link');
+        link.rel = 'manifest';
+        link.href = url;
+        document.head.appendChild(link);
+
+        console.log('📱 Fullscreen PWA manifest injected');
+      } catch (e) {
+        console.warn('Manifest injection failed:', e);
+      }
+    })();
+  </script>
+
+  <!-- ============================================================
+       INLINE SERVICE WORKER — enables offline + fullscreen install
+       (same technique as Keke Fare)
+       ============================================================ -->
+  <script>
+    (function registerInlineServiceWorker() {
+      if (!('serviceWorker' in navigator)) return;
+
+      const swCode = `
+        const CACHE = 'paymaster-v8.4';
+        const PRECACHE_URLS = ['./', './index.html'];
+
+        self.addEventListener('install', function(e) {
+          self.skipWaiting();
+          e.waitUntil(
+            caches.open(CACHE).then(function(cache) {
+              return cache.addAll(PRECACHE_URLS).catch(function() {});
+            })
+          );
+        });
+
+        self.addEventListener('activate', function(e) {
+          e.waitUntil(
+            caches.keys().then(function(names) {
+              return Promise.all(
+                names.filter(function(n) { return n !== CACHE; })
+                     .map(function(n) { return caches.delete(n); })
+              );
+            }).then(function() { return self.clients.claim(); })
+          );
+        });
+
+        self.addEventListener('fetch', function(e) {
+          const req = e.request;
+          if (req.method !== 'GET') return;
+
+          if (req.url.indexOf('script.google.com') !== -1 || req.url.indexOf('api.qrserver.com') !== -1) {
+            e.respondWith(fetch(req).catch(function() { return caches.match(req); }));
+            return;
+          }
+
+          if (req.url.indexOf('cdn.jsdelivr.net') !== -1) {
+            e.respondWith(
+              caches.match(req).then(function(hit) {
+                return hit || fetch(req).then(function(res) {
+                  if (res && res.status === 200) {
+                    const clone = res.clone();
+                    caches.open(CACHE).then(function(c) { c.put(req, clone); });
+                  }
+                  return res;
+                });
+              })
+            );
+            return;
+          }
+
+          if (req.mode === 'navigate') {
+            e.respondWith(
+              fetch(req).then(function(res) {
+                const clone = res.clone();
+                caches.open(CACHE).then(function(c) { c.put(req, clone); });
+                return res;
+              }).catch(function() {
+                return caches.match(req).then(function(hit) {
+                  return hit || caches.match('./index.html');
+                });
+              })
+            );
+            return;
+          }
+
+          e.respondWith(
+            caches.match(req).then(function(hit) {
+              return hit || fetch(req).then(function(res) {
+                if (res && res.status === 200 && res.type === 'basic') {
+                  const clone = res.clone();
+                  caches.open(CACHE).then(function(c) { c.put(req, clone); });
+                }
+                return res;
+              }).catch(function() { return hit; });
+            })
+          );
+        });
+      `;
+
+      try {
+        const blob = new Blob([swCode], { type: 'application/javascript' });
+        const url = URL.createObjectURL(blob);
+        navigator.serviceWorker.register(url, { scope: './' })
+          .then(function() { console.log('📴 Service worker registered'); })
+          .catch(function(err) { console.warn('SW registration failed:', err); });
+      } catch (e) {
+        console.warn('SW inline injection failed:', e);
+      }
+    })();
+  </script>
+
+  <!-- PWA INSTALL OVERLAY (fallback for browsers that don't auto-prompt) -->
   <div class="pwa-install-overlay" id="pwaInstallOverlay">
     <div class="pwa-install-box">
       <div class="pwa-logo">💼</div>
@@ -1719,7 +1826,6 @@
   ============================================================ -->
   <div id="mainAppContainer" style="display:none;">
 
-    <!-- SIDEBAR -->
     <nav class="app-sidebar" id="appSidebar">
       <button class="sidebar-close-btn" onclick="toggleSidebar()" aria-label="Close menu">✕</button>
       <div class="logo" onclick="switchSection('dashboard')">💼</div>
@@ -1754,10 +1860,8 @@
       </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
     <div class="main-content">
 
-      <!-- STICKY HEADER -->
       <div class="sticky-header">
         <div class="top-bar">
           <div class="greeting">
@@ -1767,7 +1871,7 @@
         </div>
       </div>
 
-      <!-- ========== SECTION: DASHBOARD ========== -->
+      <!-- DASHBOARD -->
       <div class="section active" id="section-dashboard">
         <div class="card" id="card-dashboard-overview">
           <div class="card-header">
@@ -1825,7 +1929,7 @@
         </div>
       </div>
 
-      <!-- ========== SECTION: AGREEMENTS ========== -->
+      <!-- AGREEMENTS -->
       <div class="section" id="section-agreements">
         <div class="card" id="card-agreements">
           <div class="card-header">
@@ -1842,7 +1946,7 @@
         </div>
       </div>
 
-      <!-- ========== SECTION: PAYMENT ========== -->
+      <!-- PAYMENT -->
       <div class="section" id="section-payment">
         <div class="card" id="card-payment">
           <div class="card-header">
@@ -1878,7 +1982,7 @@
         </div>
       </div>
 
-      <!-- ========== SECTION: HISTORY ========== -->
+      <!-- HISTORY -->
       <div class="section" id="section-history">
         <div class="card" id="card-history">
           <div class="card-header">
@@ -1912,7 +2016,7 @@
         </div>
       </div>
 
-      <!-- ========== SECTION: PDF ========== -->
+      <!-- PDF -->
       <div class="section" id="section-pdf">
         <div class="card" id="card-pdf">
           <div class="card-header">
@@ -1942,10 +2046,9 @@
         </div>
       </div>
 
-      <!-- ========== SECTION: SETTINGS ========== -->
+      <!-- SETTINGS -->
       <div class="section" id="section-settings">
 
-        <!-- SHARE & REFERRAL CARD -->
         <div class="card" id="card-settings-share">
           <div class="card-header">
             <h2><span class="card-icon">📢</span> Share & Invite <span class="locked-overlay-badge pro-active" id="refBadgeTop">🌱 Newcomer</span></h2>
@@ -1958,7 +2061,6 @@
             <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:12px;line-height:1.6;">
               Help other business owners discover PayMaster. Share with friends and unlock rewards! 🎁
             </p>
-
             <div class="referral-stats">
               <div class="ref-stat-box">
                 <div class="ref-stat-num" id="refShareCount">0</div>
@@ -1973,9 +2075,7 @@
                 <div class="ref-stat-label">Installs</div>
               </div>
             </div>
-
             <div id="refRewardBadge" class="ref-reward-badge">🌱 Newcomer — Share to unlock rewards</div>
-
             <div class="reward-tiers" id="rewardTiers">
               <div class="reward-tier" data-tier="1">
                 <span class="tier-icon">🌱</span>
@@ -1998,7 +2098,6 @@
                 <span class="tier-progress">0/10</span>
               </div>
             </div>
-
             <div class="share-grid">
               <button class="share-btn whatsapp" onclick="shareWhatsApp()">
                 <span class="share-icon">💬</span>
@@ -2025,7 +2124,6 @@
                 <span>More</span>
               </button>
             </div>
-
             <div class="qr-section">
               <p style="font-size:0.72rem;color:var(--text-muted);margin-bottom:8px;text-align:center;">
                 📱 Scan to open PayMaster on another device
@@ -2035,7 +2133,6 @@
               </div>
               <button class="outline small-btn" onclick="downloadQR()" style="width:auto;margin:10px auto 0;display:block;">⬇️ Download QR</button>
             </div>
-
             <div style="margin-top:12px;">
               <label>🔗 Your invite link (tap to copy)</label>
               <div class="invite-link-box" id="inviteLinkBox" onclick="copyInviteLink()"></div>
@@ -2043,7 +2140,6 @@
           </div>
         </div>
 
-        <!-- FLOATING ICONS TOGGLES (New) -->
         <div class="card" id="card-settings-floating">
           <div class="card-header">
             <h2><span class="card-icon">🎈</span> Floating Icons</h2>
@@ -2206,16 +2302,12 @@
         </div>
       </div>
 
-      <footer>💼 PayMaster v8.2 • All data stored on your device</footer>
+      <footer>💼 PayMaster v8.4 • All data stored on your device</footer>
     </div>
   </div>
 
-  <!-- TOAST CONTAINER -->
   <div id="toastContainer" class="toast-container"></div>
 
-  <!-- ============================================================
-  SCRIPT
-  ============================================================ -->
   <script>
     // =====================================================================
     //  CONFIG
@@ -2227,20 +2319,19 @@
     const SHARE_MESSAGE = "💼 Check out PayMaster — a FREE hire purchase & debt tracker for small businesses. No signup, works offline. Track payments, balances & generate PDF reports!";
 
     // =====================================================================
-    //  STANDALONE MODE DETECTION
+    //  STANDALONE DETECTION
     // =====================================================================
     function isStandalone() {
       return window.matchMedia('(display-mode: standalone)').matches ||
-             window.navigator.standalone === true ||
-             document.referrer.includes('android-app://') ||
              window.matchMedia('(display-mode: fullscreen)').matches ||
-             window.matchMedia('(display-mode: minimal-ui)').matches;
+             window.matchMedia('(display-mode: minimal-ui)').matches ||
+             window.navigator.standalone === true ||
+             document.referrer.includes('android-app://');
     }
 
     function applyStandaloneMode() {
       if (isStandalone()) {
         document.body.classList.add('standalone-mode');
-        // In standalone mode, hide the browser-ish elements
         const overlay = document.getElementById('pwaInstallOverlay');
         if (overlay) overlay.classList.remove('visible');
       } else {
@@ -2249,7 +2340,7 @@
     }
 
     // =====================================================================
-    //  PWA INSTALL PROMPT (forced flow)
+    //  PWA INSTALL PROMPT
     // =====================================================================
     let deferredPrompt = null;
     const pwaInstallOverlay = document.getElementById('pwaInstallOverlay');
@@ -2260,17 +2351,12 @@
 
     function showInstallOverlay() {
       if (isStandalone()) return;
-      if (localStorage.getItem('pmInstallSkipped') === 'true' && deferredPrompt === null) {
-        // If user has skipped before, only show if install prompt is available again
-        return;
-      }
       pwaInstallOverlay.classList.add('visible');
     }
 
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
-      // Always show the install overlay if not standalone
       if (!isStandalone()) {
         setTimeout(showInstallOverlay, 800);
       }
@@ -2283,16 +2369,12 @@
         if (outcome === 'accepted') {
           showToast('🎉 Installing PayMaster...');
           incrementRefInstall();
-          setTimeout(() => {
-            pwaInstallOverlay.classList.remove('visible');
-          }, 800);
+          setTimeout(() => { pwaInstallOverlay.classList.remove('visible'); }, 800);
         } else {
-          // User declined the install
           showToast('You can install anytime from the menu.');
         }
         deferredPrompt = null;
       } else {
-        // No install prompt available — show manual instructions
         pwaInstructions.style.display = 'block';
         const ua = navigator.userAgent;
         if (/iPhone|iPad|iPod/i.test(ua)) {
@@ -2319,8 +2401,8 @@
       showToast('🎉 PayMaster installed successfully!');
     });
 
-    // Re-check standalone when display-mode changes
     window.matchMedia('(display-mode: standalone)').addEventListener('change', applyStandaloneMode);
+    window.matchMedia('(display-mode: fullscreen)').addEventListener('change', applyStandaloneMode);
 
     // =====================================================================
     //  FLOATING ICONS TOGGLE
@@ -2332,7 +2414,6 @@
     function setFloatingPref(key, value) {
       localStorage.setItem('pmFloat_' + key, String(value));
     }
-
     function applyFloatingPrefs() {
       const waEl = document.getElementById('whatsappFloat');
       const shareEl = document.getElementById('shareFloat');
@@ -2345,13 +2426,11 @@
       if (waToggle) waToggle.classList.toggle('on', showWA);
       if (shareToggle) shareToggle.classList.toggle('on', showShare);
     }
-
     function toggleFloatingIcon(key) {
       const current = getFloatingPref(key);
-      const newValue = !current;
-      setFloatingPref(key, newValue);
+      setFloatingPref(key, !current);
       applyFloatingPrefs();
-      showToast(newValue ? '✅ Button shown' : '🚫 Button hidden');
+      showToast(!current ? '✅ Button shown' : '🚫 Button hidden');
     }
 
     // =====================================================================
@@ -2463,7 +2542,7 @@
     let fullscreenData = null;
 
     // =====================================================================
-    //  PERFORMANCE: requestAnimationFrame scheduler
+    //  PERFORMANCE HELPERS
     // =====================================================================
     const rafSchedule = (() => {
       let scheduled = new Map();
@@ -2492,23 +2571,15 @@
       const id = getDeviceId();
       return id.replace(/[^A-Z0-9]/g, '').slice(-6);
     }
-
-    function getShareCount() {
-      return parseInt(localStorage.getItem('pmShareCount') || '0', 10);
-    }
+    function getShareCount() { return parseInt(localStorage.getItem('pmShareCount') || '0', 10); }
     function incrementShareCount() {
-      const c = getShareCount() + 1;
-      localStorage.setItem('pmShareCount', String(c));
+      localStorage.setItem('pmShareCount', String(getShareCount() + 1));
       rafSchedule('refstats', updateReferralStats);
       checkRewardUnlock();
-      return c;
     }
-    function getRefVisitCount() {
-      return parseInt(localStorage.getItem('pmRefVisits') || '0', 10);
-    }
+    function getRefVisitCount() { return parseInt(localStorage.getItem('pmRefVisits') || '0', 10); }
     function incrementRefInstall() {
-      const c = parseInt(localStorage.getItem('pmRefInstalls') || '0', 10) + 1;
-      localStorage.setItem('pmRefInstalls', String(c));
+      localStorage.setItem('pmRefInstalls', String(parseInt(localStorage.getItem('pmRefInstalls') || '0', 10) + 1));
       rafSchedule('refstats', updateReferralStats);
     }
     function trackReferralVisit() {
@@ -2516,8 +2587,7 @@
         const params = new URLSearchParams(window.location.search);
         const ref = params.get('ref');
         if (!ref) return;
-        const myCode = getReferralCode();
-        if (ref === myCode) return;
+        if (ref === getReferralCode()) return;
         const seen = JSON.parse(localStorage.getItem('pmSeenRefs') || '[]');
         if (seen.includes(ref)) return;
         seen.push(ref);
@@ -2529,15 +2599,13 @@
           window.history.replaceState({}, '', url.toString());
         }
         setTimeout(() => { showToast('👋 Welcome! You were invited by a friend.'); }, 1500);
-      } catch (e) { console.warn('Ref tracking error:', e); }
+      } catch (e) {}
     }
-
     function buildInviteURL() {
       const base = APP_URL;
       const sep = base.includes('?') ? '&' : '?';
       return base + sep + 'ref=' + getReferralCode() + '&utm_source=share&utm_medium=referral';
     }
-
     function updateReferralStats() {
       const shares = getShareCount();
       const visits = getRefVisitCount();
@@ -2571,7 +2639,6 @@
 
       rafSchedule('qr', updateQRCode);
     }
-
     function checkRewardUnlock() {
       const shares = getShareCount();
       const milestones = [1, 3, 5, 10];
@@ -2585,7 +2652,6 @@
         }
       }
     }
-
     let _lastQRUrl = '';
     function updateQRCode() {
       const img = document.getElementById('qrCodeImg');
@@ -2596,49 +2662,40 @@
       img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=10&data=' + encodeURIComponent(url);
       img.alt = 'PayMaster QR Code';
     }
-
     function downloadQR() {
       const img = document.getElementById('qrCodeImg');
       if (!img || !img.src) { showToast('QR not ready yet'); return; }
-      fetch(img.src)
-        .then(res => res.blob())
-        .then(blob => {
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url; a.download = 'paymaster_qr.png';
-          document.body.appendChild(a); a.click(); document.body.removeChild(a);
-          setTimeout(() => URL.revokeObjectURL(url), 5000);
-          showToast('QR code downloaded!');
-        })
-        .catch(() => { window.open(img.src, '_blank'); showToast('Long-press to save QR code'); });
+      fetch(img.src).then(res => res.blob()).then(blob => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'paymaster_qr.png';
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        setTimeout(() => URL.revokeObjectURL(url), 5000);
+        showToast('QR code downloaded!');
+      }).catch(() => { window.open(img.src, '_blank'); showToast('Long-press to save QR code'); });
     }
 
     // =====================================================================
     //  SHARE FUNCTIONS
     // =====================================================================
     function shareWhatsApp() {
-      const url = buildInviteURL();
-      const msg = SHARE_MESSAGE + '\n\n' + url;
-      window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
+      window.open('https://wa.me/?text=' + encodeURIComponent(SHARE_MESSAGE + '\n\n' + buildInviteURL()), '_blank');
       incrementShareCount();
       showToast('📤 Sharing on WhatsApp — thanks!');
     }
     function shareFacebook() {
-      const url = buildInviteURL();
-      window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+      window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(buildInviteURL()), '_blank');
       incrementShareCount();
       showToast('📤 Sharing on Facebook — thanks!');
     }
     function shareTwitter() {
-      const url = buildInviteURL();
       const text = 'Check out PayMaster — free hire purchase & debt tracker for small businesses!';
-      window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url), '_blank');
+      window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(buildInviteURL()), '_blank');
       incrementShareCount();
       showToast('📤 Sharing on X — thanks!');
     }
     function shareTelegram() {
-      const url = buildInviteURL();
-      window.open('https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(SHARE_MESSAGE), '_blank');
+      window.open('https://t.me/share/url?url=' + encodeURIComponent(buildInviteURL()) + '&text=' + encodeURIComponent(SHARE_MESSAGE), '_blank');
       incrementShareCount();
       showToast('📤 Sharing on Telegram — thanks!');
     }
@@ -2654,7 +2711,6 @@
         navigator.clipboard.writeText(url).then(() => { showToast('🔗 Invite link copied!'); incrementShareCount(); }).catch(() => fallbackCopy(url));
       } else { fallbackCopy(url); }
     }
-
     function scrollToShare() {
       switchSection('settings');
       setTimeout(() => {
@@ -2667,7 +2723,6 @@
         }
       }, 250);
     }
-
     function shareCelebration() {
       const url = buildInviteURL();
       const msg = '🎉 I just completed a full payment in PayMaster! Best free tracker for hire purchase & debts.\n\n' + url;
@@ -2675,7 +2730,6 @@
       else { window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank'); }
       incrementShareCount();
     }
-
     function fallbackCopy(text) {
       const ta = document.createElement('textarea');
       ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
@@ -2684,14 +2738,9 @@
       catch (e) { showToast('Could not copy.'); }
       document.body.removeChild(ta);
     }
-
-    // =====================================================================
-    //  WHATSAPP OPEN
-    // =====================================================================
     function openWhatsApp() {
       const number = MOMO_NUMBER.replace(/\D/g, '');
-      const url = `https://wa.me/233${number.slice(1)}?text=Hello%20LikoTech!%20I%20need%20a%20custom%20business%20app%20solution%20for%3A`;
-      window.open(url, '_blank');
+      window.open('https://wa.me/233' + number.slice(1) + '?text=Hello%20LikoTech!%20I%20need%20a%20custom%20business%20app%20solution%20for%3A', '_blank');
     }
 
     // =====================================================================
@@ -2703,7 +2752,6 @@
       floatingMenuBtn.classList.toggle('visible', isHidden);
       localStorage.setItem('pmSidebarHidden', isHidden ? 'true' : 'false');
     }
-
     function restoreSidebarState() {
       const isHidden = localStorage.getItem('pmSidebarHidden') === 'true';
       if (isHidden) {
@@ -2714,7 +2762,7 @@
     }
 
     // =====================================================================
-    //  FLYER DATA (shortened for performance)
+    //  FLYERS
     // =====================================================================
     const FLYERS = [
       { icon: '📺', title: 'Electronics & Appliances', category: 'Retail & Consumer Goods', desc: 'Sell TVs, fridges, phones, and appliances on installment plans with professional tracking.', example: 'TV: GH₵2,500 • 5 monthly installments', features: ['📊 Payment tracking', '📅 Reminders', '📄 PDF reports', '📱 Mobile-friendly'], badge: '🏪 Business' },
@@ -2734,9 +2782,7 @@
       { icon: '🚜', title: 'Agricultural Equipment', category: 'Agriculture', desc: 'Sell tractors and equipment with long-term plans.', example: 'Tractor: GH₵25,000 • 18-month plan', features: ['📈 Charts', '📄 PDFs', '💰 Large', '🔄 Reminders'], badge: '🏪 Business' },
       { icon: '🏋️‍♀️', title: 'Gym Memberships', category: 'Health & Wellness', desc: 'Track monthly and annual membership payments.', example: 'Annual: GH₵1,200 • Monthly', features: ['📊 Members', '📅 Reminders', '📄 Reports', '📱 Management'], badge: '💪 Health' }
     ];
-
     let currentFlyerIndex = 0;
-
     function renderFlyer(index) {
       const f = FLYERS[index];
       if (!f) return;
@@ -2754,7 +2800,6 @@
         <button class="cta" onclick="closeFlyerCarousel()">💼 Start Using PayMaster</button>
       `;
     }
-
     function openFlyerCarousel(initialIndex) {
       const carousel = document.getElementById('flyerCarousel');
       currentFlyerIndex = initialIndex;
@@ -2764,14 +2809,11 @@
       if (window._flyerTimeout) clearTimeout(window._flyerTimeout);
       window._flyerTimeout = setTimeout(() => { closeFlyerCarousel(); }, 5000);
     }
-
     function closeFlyerCarousel() {
-      const carousel = document.getElementById('flyerCarousel');
-      carousel.classList.remove('active');
+      document.getElementById('flyerCarousel').classList.remove('active');
       document.body.style.overflow = '';
       if (window._flyerTimeout) { clearTimeout(window._flyerTimeout); window._flyerTimeout = null; }
     }
-
     function navigateFlyer(direction) {
       currentFlyerIndex = (currentFlyerIndex + direction + FLYERS.length) % FLYERS.length;
       renderFlyer(currentFlyerIndex);
@@ -2801,7 +2843,6 @@
         }
       }, 50);
     }
-
     function closeFullscreen(e) {
       if (e && e.target && e.target !== e.currentTarget) return;
       if (!fullscreenData) return;
@@ -2822,7 +2863,7 @@
     }
 
     // =====================================================================
-    //  SECTION NAVIGATION
+    //  NAVIGATION
     // =====================================================================
     function switchSection(sectionId) {
       document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
@@ -2831,24 +2872,18 @@
       document.querySelectorAll('.nav-icons button').forEach(el => el.classList.remove('active'));
       const btn = document.querySelector(`.nav-icons button[data-section="${sectionId}"]`);
       if (btn) btn.classList.add('active');
-      if (sectionId === 'dashboard') {
-        setTimeout(() => { updateChartForCurrent(); updateDashboardStats(); }, 60);
+      if (sectionId === 'dashboard') setTimeout(() => { updateChartForCurrent(); updateDashboardStats(); }, 60);
+      if (sectionId === 'history' && currentAgreementId && agreements[currentAgreementId]) {
+        renderHistoryTable(agreements[currentAgreementId].records);
       }
-      if (sectionId === 'history') {
-        if (currentAgreementId && agreements[currentAgreementId]) {
-          renderHistoryTable(agreements[currentAgreementId].records);
-        }
-      }
-      if (sectionId === 'settings') {
-        setTimeout(() => { updateReferralStats(); applyFloatingPrefs(); }, 60);
-      }
+      if (sectionId === 'settings') setTimeout(() => { updateReferralStats(); applyFloatingPrefs(); }, 60);
     }
 
     // =====================================================================
     //  CELEBRATION
     // =====================================================================
-    function showCelebration(agreementName, amount) {
-      celebAgreementName.textContent = agreementName || 'this agreement';
+    function showCelebration(name, amount) {
+      celebAgreementName.textContent = name || 'this agreement';
       celebAmount.textContent = formatCurrency(amount);
       celebrationModal.classList.add('active');
       if (currentAgreementId) celebShownForAgreement[currentAgreementId] = true;
@@ -2857,7 +2892,7 @@
     function closeCelebration() { celebrationModal.classList.remove('active'); }
 
     // =====================================================================
-    //  EDIT RECORD MODAL
+    //  EDIT RECORD
     // =====================================================================
     function openEditRecordModal(agreementId, recordId) {
       const ag = agreements[agreementId];
@@ -2872,7 +2907,6 @@
       editRecordModal.classList.add('active');
     }
     function closeEditRecordModal() { editRecordTarget = null; editRecordModal.classList.remove('active'); }
-
     function saveEditedRecord() {
       if (!editRecordTarget) return;
       const { agreementId, recordId } = editRecordTarget;
@@ -2890,17 +2924,13 @@
         record.date = date; record.totalHireAmount = hire; record.amountPaid = paid;
         ag.totalHireAmount = hire;
         ag.records.sort((a, b) => new Date(a.date) - new Date(b.date));
-        saveAgreements();
-        renderHistoryTable(ag.records);
-        updatePreviewForCurrent();
-        updateChartForCurrent();
-        updateReminderDisplay();
+        saveAgreements(); renderHistoryTable(ag.records);
+        updatePreviewForCurrent(); updateChartForCurrent(); updateReminderDisplay();
         refreshAllCurrencyDisplays();
-        showToast('✅ Record updated successfully');
+        showToast('✅ Record updated');
       }
       closeEditRecordModal();
     }
-
     editRecordCancelBtn.addEventListener('click', closeEditRecordModal);
     editRecordSaveBtn.addEventListener('click', saveEditedRecord);
     editRecordModal.addEventListener('click', function(e) { if (e.target === this) closeEditRecordModal(); });
@@ -2916,7 +2946,6 @@
       }
       return id;
     }
-
     function updateStatusBadge() {
       if (pdfProBadge) { pdfProBadge.textContent = '📄 2/day'; pdfProBadge.className = 'locked-overlay-badge'; }
       if (syncProBadge) { syncProBadge.textContent = 'Auto'; syncProBadge.className = 'locked-overlay-badge pro-active'; }
@@ -2934,13 +2963,11 @@
     }
     function incrementPdfUsage() {
       const today = new Date().toISOString().slice(0, 10);
-      const count = getPdfUsage() + 1;
-      localStorage.setItem('pmPdfUsage', JSON.stringify({ date: today, count }));
+      localStorage.setItem('pmPdfUsage', JSON.stringify({ date: today, count: getPdfUsage() + 1 }));
       updatePdfUsageInfo();
     }
     function updatePdfUsageInfo() {
-      const used = getPdfUsage();
-      const remaining = Math.max(0, 2 - used);
+      const remaining = Math.max(0, 2 - getPdfUsage());
       if (pdfUsageInfo) {
         pdfUsageInfo.textContent = `${remaining} download${remaining !== 1 ? 's' : ''} remaining today`;
         pdfUsageInfo.style.color = remaining === 0 ? 'var(--danger)' : 'var(--gold)';
@@ -2959,7 +2986,6 @@
       document.getElementById('toastContainer').appendChild(t);
       setTimeout(() => t.remove(), 3000);
     }
-
     function showConfirm(msg, cb) {
       confirmMessage.innerText = msg;
       confirmModal.classList.add('active');
@@ -2975,7 +3001,6 @@
     // =====================================================================
     function getTodayDate() { return new Date().toISOString().slice(0, 10); }
     function formatCurrency(v) { return `${currentCurrencySymbol}${Number(v).toLocaleString()}`; }
-
     function calcTotals(recs) {
       if (!recs.length) return { totalPaid: 0, finalBalance: 0, lastHire: 0 };
       const s = [...recs].sort((a, b) => new Date(a.date) - new Date(b.date));
@@ -2993,14 +3018,12 @@
       const keyMaterial = await crypto.subtle.importKey("raw", encoder.encode(password), "PBKDF2", false, ["deriveKey"]);
       const key = await crypto.subtle.deriveKey({ name: "PBKDF2", salt, iterations: 100000, hash: "SHA-256" }, keyMaterial, { name: "AES-GCM", length: 256 }, false, ["encrypt"]);
       const iv = crypto.getRandomValues(new Uint8Array(12));
-      const encodedData = encoder.encode(JSON.stringify(data));
-      const encrypted = await crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, encodedData);
+      const encrypted = await crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, encoder.encode(JSON.stringify(data)));
       const combined = new Uint8Array(salt.length + iv.length + encrypted.byteLength);
       combined.set(salt, 0); combined.set(iv, salt.length);
       combined.set(new Uint8Array(encrypted), salt.length + iv.length);
       return btoa(String.fromCharCode(...combined));
     }
-
     async function decryptData(encoded, password) {
       try {
         const combined = Uint8Array.from(atob(encoded), c => c.charCodeAt(0));
@@ -3016,37 +3039,34 @@
     }
 
     // =====================================================================
-    //  RECOVERY CODE
+    //  RECOVERY
     // =====================================================================
     async function generateRecoveryCode(password) {
       const data = { a: agreements, c: currentAgreementId, s: currentCurrencySymbol, t: document.body.classList.contains('dark') ? 'd' : 'l' };
-      try { const encrypted = await encryptData(data, password); return 'PMR2:' + encrypted; }
-      catch (e) { showToast('Error generating recovery code: ' + e.message); return null; }
+      try { return 'PMR2:' + await encryptData(data, password); }
+      catch (e) { showToast('Error: ' + e.message); return null; }
     }
-
     async function decodeRecoveryCode(code, password) {
       try {
-        if (!code || typeof code !== 'string') throw new Error('Invalid recovery code format');
+        if (!code || typeof code !== 'string') throw new Error('Invalid recovery code');
         const parts = code.split(':');
-        if (parts.length !== 2) throw new Error('Invalid recovery code format.');
+        if (parts.length !== 2) throw new Error('Invalid format');
         const version = parts[0], encoded = parts[1];
         if (version === 'PMR1') {
           const data = JSON.parse(decodeURIComponent(escape(atob(encoded))));
-          if (!data.a || typeof data.a !== 'object') throw new Error('Invalid recovery data');
+          if (!data.a) throw new Error('Invalid data');
           return { agreements: data.a, currentAgreementId: data.c, currencySymbol: data.s || '₵', theme: data.t === 'd' ? 'dark' : 'light' };
         } else if (version === 'PMR2') {
           const data = await decryptData(encoded, password);
-          if (!data.a || typeof data.a !== 'object') throw new Error('Invalid recovery data');
+          if (!data.a) throw new Error('Invalid data');
           return { agreements: data.a, currentAgreementId: data.c, currencySymbol: data.s || '₵', theme: data.t === 'd' ? 'dark' : 'light' };
-        } else throw new Error('Unsupported recovery code version');
+        } else throw new Error('Unsupported version');
       } catch (e) { throw new Error('Invalid recovery code: ' + e.message); }
     }
-
     async function showRecoveryCode() {
       recoveryPasswordModal.classList.add('active');
       rpNewPassword.value = ''; rpConfirmPassword.value = ''; rpError.textContent = '';
     }
-
     async function handleGenerateRecoveryCode() {
       const password = rpNewPassword.value.trim();
       const confirm = rpConfirmPassword.value.trim();
@@ -3058,28 +3078,25 @@
         document.getElementById('recoveryCodeText').textContent = code;
         document.getElementById('recoveryCodeDisplay').style.display = 'block';
         recoveryPasswordModal.classList.remove('active');
-        showToast('Recovery code generated! Copy and save it.');
+        showToast('Recovery code generated!');
       }
     }
-
     function copyRecoveryCode() {
       const text = document.getElementById('recoveryCodeText').textContent;
       if (navigator.clipboard) { navigator.clipboard.writeText(text).then(() => showToast('Code copied!')).catch(() => fallbackCopy2(text)); }
       else fallbackCopy2(text);
     }
-
     function fallbackCopy2(text) {
       const ta = document.createElement('textarea');
       ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
       document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy'); showToast('Code copied!'); } catch (e) { showToast('Could not copy.'); }
+      try { document.execCommand('copy'); showToast('Copied!'); } catch (e) {}
       document.body.removeChild(ta);
     }
-
     async function restoreFromRecoveryCode(code, password) {
       try {
         const data = await decodeRecoveryCode(code, password);
-        showConfirm('This will replace all your current data with the recovered data. Continue?', (ok) => {
+        showConfirm('This will replace all your current data. Continue?', (ok) => {
           if (!ok) return;
           agreements = data.agreements;
           currentAgreementId = data.currentAgreementId || Object.keys(agreements)[0];
@@ -3090,7 +3107,7 @@
           updateReminderDisplay(); refreshAllCurrencyDisplays();
           updateDashboardStats(); updateStickyHeader(); updateStatusBadge();
           document.getElementById('recoveryModal').classList.remove('active');
-          showToast('✅ Data restored successfully!');
+          showToast('✅ Data restored!');
         });
       } catch (e) {
         recoveryError.textContent = e.message;
@@ -3105,11 +3122,10 @@
       localStorage.setItem('pmAgreements', JSON.stringify(agreements));
       localStorage.setItem('pmCurrentId', currentAgreementId);
     }
-
     function loadAgreements() {
-      const raw = localStorage.getItem('pmAgreements') || localStorage.getItem('kekeAgreements');
+      const raw = localStorage.getItem('pmAgreements');
       if (raw) { try { agreements = JSON.parse(raw); } catch (e) { agreements = {}; } } else { agreements = {}; }
-      const cur = localStorage.getItem('pmCurrentId') || localStorage.getItem('kekeCurrentAgreementId');
+      const cur = localStorage.getItem('pmCurrentId');
       currentAgreementId = (cur && agreements[cur]) ? cur : Object.keys(agreements)[0];
       for (const id in agreements) {
         if (!agreements[id].schedule) agreements[id].schedule = { nextDueDate: '', installmentAmount: '', frequency: 'monthly' };
@@ -3159,7 +3175,6 @@
       currentAgreementNameDisplay.textContent = (currentAgreementId && agreements[currentAgreementId]) ? agreements[currentAgreementId].name : 'Select Agreement';
       updateStickyHeader();
     }
-
     function startInlineEdit(id, nameSpan) {
       const ag = agreements[id];
       if (!ag) return;
@@ -3172,8 +3187,7 @@
       nameSpan.parentNode.replaceChild(input, nameSpan);
       input.focus(); input.select();
       const saveEdit = () => {
-        const newName = input.value.trim() || currentName;
-        agreements[id].name = newName;
+        agreements[id].name = input.value.trim() || currentName;
         saveAgreements(); renderAgreementsList();
         if (currentAgreementId === id) updateStickyHeader();
         showToast('Agreement name updated');
@@ -3184,7 +3198,6 @@
         if (e.key === 'Escape') { input.value = currentName; input.blur(); }
       });
     }
-
     function switchAgreement(id) {
       if (!agreements[id]) return;
       currentAgreementId = id;
@@ -3194,7 +3207,6 @@
       updateDashboardStats(); updateStickyHeader();
       celebShownForAgreement[id] = false;
     }
-
     function deleteAgreement(id) {
       if (Object.keys(agreements).length === 1) { showToast('Cannot delete the only agreement.'); return; }
       showConfirm(`Delete "${agreements[id].name}"? All records will be lost.`, ok => {
@@ -3208,12 +3220,10 @@
         showToast('Agreement deleted');
       });
     }
-
     function addNewAgreement() {
       newAgreementNameInput.value = '';
       newAgreementModal.classList.add('active');
     }
-
     function createNewAgreement() {
       const name = newAgreementNameInput.value.trim() || 'New Agreement';
       const id = Date.now().toString();
@@ -3227,14 +3237,11 @@
       showToast(`"${name}" created`);
       celebShownForAgreement[id] = false;
     }
-
     function updateStickyHeader() {
       if (currentAgreementId && agreements[currentAgreementId]) {
         headerAgreementName.textContent = '— ' + agreements[currentAgreementId].name;
-        headerAgreementName.dataset.agreementId = currentAgreementId;
       } else {
         headerAgreementName.textContent = '— Select Agreement';
-        headerAgreementName.dataset.agreementId = '';
       }
     }
 
@@ -3242,8 +3249,7 @@
     //  DASHBOARD
     // =====================================================================
     function updateDashboardStats() {
-      const total = Object.keys(agreements).length;
-      document.getElementById('dashTotalAgreements').textContent = total;
+      document.getElementById('dashTotalAgreements').textContent = Object.keys(agreements).length;
       let totalPaid = 0, active = 0;
       for (const id in agreements) {
         const { totalPaid: tp } = calcTotals(agreements[id].records);
@@ -3275,7 +3281,6 @@
       updatePreviewForCurrent();
       updateChartForCurrent();
     }
-
     function renderHistoryTable(records) {
       const searchTerm = searchHistoryInput ? searchHistoryInput.value.toLowerCase().trim() : '';
       const fromDate = searchDateFrom ? searchDateFrom.value : '';
@@ -3318,7 +3323,6 @@
         });
       });
     }
-
     function deleteRecord(id) {
       if (!currentAgreementId) return;
       agreements[currentAgreementId].records = agreements[currentAgreementId].records.filter(r => r.id !== id);
@@ -3327,7 +3331,6 @@
       refreshAllCurrencyDisplays(); updateDashboardStats();
       showToast('Record deleted');
     }
-
     function updatePreviewForCurrent() {
       if (!currentAgreementId) return;
       const ag = agreements[currentAgreementId];
@@ -3353,15 +3356,14 @@
     }
 
     // =====================================================================
-    //  CHART (performance-optimized)
+    //  CHART
     // =====================================================================
     function drawChart(canvasEl) {
       if (!currentAgreementId || !agreements[currentAgreementId]) return;
       if (typeof Chart === 'undefined') return;
       const ag = agreements[currentAgreementId];
-      const recs = ag.records;
-      if (recs.length === 0) return;
-      const sorted = [...recs].sort((a, b) => new Date(a.date) - new Date(b.date));
+      if (ag.records.length === 0) return;
+      const sorted = [...ag.records].sort((a, b) => new Date(a.date) - new Date(b.date));
       const labels = sorted.map(r => r.date);
       let run = 0;
       const runs = sorted.map(r => { run += r.amountPaid; return run; });
@@ -3405,13 +3407,10 @@
         }
       });
     }
-
     function updateChartForCurrent() {
       if (!currentAgreementId || !agreements[currentAgreementId]) return;
       if (typeof Chart === 'undefined') {
-        if (!window.__chartReadyCallback) {
-          window.__chartReadyCallback = () => { updateChartForCurrent(); };
-        }
+        window.__chartReadyCallback = () => { updateChartForCurrent(); };
         return;
       }
       const ag = agreements[currentAgreementId];
@@ -3435,7 +3434,6 @@
       frequencySelect.value = s.frequency || 'monthly';
       updateReminderDisplay();
     }
-
     function saveSchedule() {
       if (!currentAgreementId) { showToast('No agreement selected'); return; }
       const nd = nextDueDateInput.value, ia = parseFloat(installmentAmountInput.value);
@@ -3444,7 +3442,6 @@
       saveAgreements(); updateReminderDisplay();
       showToast('Schedule saved');
     }
-
     function updateReminderDisplay() {
       if (!currentAgreementId || !agreements[currentAgreementId]) {
         reminderDisplay.innerHTML = '<p>Select an agreement to see reminders.</p>';
@@ -3473,20 +3470,18 @@
     //  CURRENCY
     // =====================================================================
     function loadCurrency() {
-      const saved = localStorage.getItem('pmCurrencySymbol') || localStorage.getItem('kekeCurrencySymbol');
+      const saved = localStorage.getItem('pmCurrencySymbol');
       const valid = ['₵', '$', '€', '£', '₦', '¥', '₹'];
       currentCurrencySymbol = (saved && valid.includes(saved)) ? saved : '₵';
       currencySelect.value = currentCurrencySymbol;
       refreshAllCurrencyDisplays();
     }
-
     function saveCurrency() {
       currentCurrencySymbol = currencySelect.value;
       localStorage.setItem('pmCurrencySymbol', currentCurrencySymbol);
       refreshAllCurrencyDisplays();
       showToast(`Currency set to ${currentCurrencySymbol}`);
     }
-
     function refreshAllCurrencyDisplays() {
       if (!currentAgreementId) return;
       updatePreviewForCurrent();
@@ -3499,7 +3494,6 @@
     //  FORM ACTIONS
     // =====================================================================
     function resetForm() { dateInput.value = getTodayDate(); amountPaidInput.value = ''; updatePreviewForCurrent(); showToast('Form reset'); }
-
     function saveRecord() {
       if (!currentAgreementId) { showToast('No agreement selected'); return; }
       const date = dateInput.value || getTodayDate();
@@ -3509,7 +3503,6 @@
       if (paid <= 0) { showToast('Enter a valid Amount Paid'); return; }
       proceedWithSave(date, hire, paid);
     }
-
     function proceedWithSave(date, hire, paid) {
       const { totalPaid } = calcTotals(agreements[currentAgreementId].records);
       if (totalPaid + paid > hire) {
@@ -3523,7 +3516,6 @@
         exceedCancelBtn.addEventListener('click', no);
       } else { performSave(date, hire, paid); }
     }
-
     function performSave(date, hire, paid) {
       const ag = agreements[currentAgreementId];
       ag.records.push({ id: Date.now(), date, totalHireAmount: hire, amountPaid: paid });
@@ -3535,7 +3527,6 @@
       showToast(`✅ Saved — ${formatCurrency(paid)} on ${date}`);
       if (navigator.vibrate) navigator.vibrate(20);
     }
-
     function clearCurrentHistory() {
       if (!currentAgreementId) { showToast('No agreement selected'); return; }
       showConfirm('Delete ALL payment records? This cannot be undone.', ok => {
@@ -3579,7 +3570,6 @@
       ov.appendChild(inner);
       document.body.appendChild(ov);
     }
-
     async function generatePDF(htmlContent, fileName) {
       if (!canDownloadPdf()) { showToast('❌ PDF limit reached (2/day). Try again tomorrow.'); return; }
       if (fullscreenOverlay.classList.contains('active')) closeFullscreen();
@@ -3627,13 +3617,10 @@
         } else { throw new Error(data.error || 'Unknown error'); }
       } catch (err) {
         clearTimeout(timeout);
-        var errMsg = (err.name === 'AbortError') ? 'Request timed out.' : err.message;
-        showErrOverlay(errMsg);
+        showErrOverlay((err.name === 'AbortError') ? 'Request timed out.' : err.message);
       }
     }
-
     function escapeHtml(s) { return s ? s.replace(/[&<>]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' } [m])) : ''; }
-
     function buildPDF(records, mainTitle, period, agree, seller, buyer) {
       const sorted = [...records].sort((a, b) => new Date(a.date) - new Date(b.date));
       let run = 0, rows = '', paid = 0, bal = 0, hire = 0;
@@ -3643,7 +3630,6 @@
       }
       return `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>PayMaster Report</title><style>body{font-family:Arial,sans-serif;margin:24px;color:#14212b}h1{color:#1a7a4a;text-align:center;font-size:22px;border-bottom:3px solid #d48c1a;padding-bottom:10px;display:inline-block}.sub{text-align:center;color:#666;font-size:12px;margin-bottom:14px}hr{border:none;border-top:2px solid #1a7a4a;margin:10px 0}.meta{font-size:12px;margin-bottom:14px;line-height:1.8}table{width:100%;border-collapse:collapse;margin-bottom:16px;font-size:12px}th{background:#1a7a4a;color:white;padding:8px;text-align:right}th:first-child{text-align:left}td{border:1px solid #ddd;padding:8px}td:not(:first-child){text-align:right}tr:nth-child(even){background:#f7f9fc}.sum{width:45%;margin-left:auto;font-size:13px}.sum td{padding:6px 10px;border:none}.sum tr:last-child{background:#e8f3ee;font-weight:bold}.footer{text-align:center;margin-top:28px;font-size:10px;color:#999}</style></head><body><h1>💼 ${escapeHtml(mainTitle)}</h1><div class="sub">${escapeHtml(agree)} • Hire Purchase Report</div><hr><div class="meta"><strong>Period:</strong> ${escapeHtml(period)}<br><strong>Agreement:</strong> ${escapeHtml(agree)}<br><strong>Seller:</strong> ${escapeHtml(seller)} &nbsp; <strong>Buyer:</strong> ${escapeHtml(buyer)}<br><strong>Generated:</strong> ${new Date().toLocaleString()}</div><table><thead><tr><th>Date</th><th>Contract</th><th>Paid</th><th>Total</th><th>Balance</th></tr></thead><tbody>${rows}</tbody></table><table class="sum"><tr><td>Total Contract:</td><td>${formatCurrency(hire)}</td></tr><tr><td>Total Paid:</td><td>${formatCurrency(paid)}</td></tr><tr><td>Remaining:</td><td>${formatCurrency(bal)}</td></tr></table><div class="footer">PayMaster • Hire Purchase Tracker • ${new Date().toLocaleDateString()}</div></body></html>`;
     }
-
     async function requestPDF(records, baseTitle) {
       if (!canDownloadPdf()) { showToast('❌ PDF limit reached (2/day). Try again tomorrow.'); return; }
       if (!currentAgreementId) { showToast('No agreement selected'); return; }
@@ -3676,14 +3662,12 @@
       nameModalConfirm.addEventListener('click', yes);
       nameModalCancel.addEventListener('click', no);
     }
-
     async function handleDownloadFull() {
       if (!currentAgreementId) { showToast('No agreement selected'); return; }
       const r = agreements[currentAgreementId].records;
       if (!r.length) { showToast('No records to export'); return; }
       await requestPDF(r, 'Full Payment History');
     }
-
     async function handleDownloadRange() {
       if (!currentAgreementId) { showToast('No agreement selected'); return; }
       const s = reportStartDate.value, e = reportEndDate.value;
@@ -3692,7 +3676,6 @@
       if (!f.length) { showToast('No records in that range'); return; }
       await requestPDF(f, `${s} to ${e}`);
     }
-
     function setToday() { const d = getTodayDate(); reportStartDate.value = d; reportEndDate.value = d; }
     function setThisWeek() {
       const t = new Date(), day = t.getDay(), diff = day === 0 ? 6 : day - 1;
@@ -3725,9 +3708,8 @@
       localStorage.setItem('pmTheme', d ? 'dark' : 'light');
       if (progressChart) updateChartForCurrent();
     }
-
     function loadTheme() {
-      const s = localStorage.getItem('pmTheme') || localStorage.getItem('kekeTheme');
+      const s = localStorage.getItem('pmTheme');
       if (s === 'dark') { document.body.classList.add('dark'); themeToggle.textContent = '☀️'; }
       else { document.body.classList.remove('dark'); themeToggle.textContent = '🌙'; }
     }
@@ -3744,12 +3726,11 @@
     }
 
     // =====================================================================
-    //  CLOUD BACKUP
+    //  BACKUP
     // =====================================================================
     function buildBackupData() {
       return { agreements, currentAgreementId, currencySymbol: currentCurrencySymbol, theme: document.body.classList.contains('dark') ? 'dark' : 'light' };
     }
-
     async function syncBackupToCloud() {
       const phone = localStorage.getItem('pmPhone') || 'free_user';
       const licenseKey = localStorage.getItem('pmLicenseKey') || 'free_key';
@@ -3764,16 +3745,11 @@
         syncStatusText.textContent = data.success ? 'Synced just now' : 'Sync failed';
       } catch (e) { syncStatusIcon.textContent = '❌'; syncStatusText.textContent = 'Sync error'; }
     }
-
-    // =====================================================================
-    //  MANUAL BACKUP
-    // =====================================================================
     function exportBackup() {
       const backup = {
         version: 1, timestamp: new Date().toISOString(), deviceId: getDeviceId(),
         agreements, currentAgreementId, currencySymbol: currentCurrencySymbol,
-        theme: document.body.classList.contains('dark') ? 'dark' : 'light',
-        isActivated: true, licenseKey: 'free_key', phone: 'free_user'
+        theme: document.body.classList.contains('dark') ? 'dark' : 'light'
       };
       const jsonStr = JSON.stringify(backup, null, 2);
       const blob = new Blob([jsonStr], { type: 'application/json' });
@@ -3784,7 +3760,6 @@
       setTimeout(() => { URL.revokeObjectURL(url); }, 5000);
       showToast('Backup downloaded');
     }
-
     function importBackup(file) {
       const reader = new FileReader();
       reader.onload = (e) => {
@@ -3819,7 +3794,6 @@
 
     function setPassword(p) { localStorage.setItem('pmAppPassword', p); storedPassword = p; }
     function checkPassword(p) { return p === storedPassword; }
-
     function showLockScreen(isFirstTime) {
       const lock = document.getElementById('lockScreen');
       const subtitle = document.getElementById('lockSubtitle');
@@ -3853,7 +3827,6 @@
       btn.disabled = false; btn.classList.remove('loading');
       setTimeout(() => { try { input.focus(); } catch (e) {} }, 200);
     }
-
     function hideLockScreen() {
       document.getElementById('lockScreen').classList.add('hidden');
       mainAppContainer.style.display = 'block';
@@ -3865,7 +3838,6 @@
         }
       }, 100);
     }
-
     function toggleLockEye() {
       const input = document.getElementById('passwordInput');
       const eyeBtn = document.getElementById('lockEyeBtn');
@@ -3873,7 +3845,6 @@
       else { input.type = 'password'; eyeBtn.textContent = '👁'; }
       input.focus();
     }
-
     function handlePasswordSubmit() {
       const v = document.getElementById('passwordInput').value;
       const errEl = document.getElementById('passwordError');
@@ -3899,10 +3870,6 @@
         }
       }
     }
-
-    // =====================================================================
-    //  PASSWORD MODALS
-    // =====================================================================
     function openChangePasswordModal() {
       document.getElementById('cpCurrent').value = '';
       document.getElementById('cpNew').value = '';
@@ -3914,7 +3881,6 @@
 
     document.getElementById('cpCancelBtn').addEventListener('click', () => changePasswordModal.classList.remove('active'));
     document.getElementById('fpCancelBtn').addEventListener('click', () => forgotPasswordModal.classList.remove('active'));
-
     document.getElementById('cpConfirmBtn').addEventListener('click', () => {
       const current = document.getElementById('cpCurrent').value;
       const newPass = document.getElementById('cpNew').value;
@@ -3930,7 +3896,6 @@
       document.getElementById('passwordInput').value = '';
       showLockScreen(false);
     });
-
     document.getElementById('fpConfirmBtn').addEventListener('click', () => {
       const deviceId = getDeviceId();
       localStorage.clear();
@@ -3954,46 +3919,9 @@
     setTimeout(() => { if (!loaderHidden) hideLoader(); }, 3000);
 
     // =====================================================================
-    //  SERVICE WORKER
-    // =====================================================================
-    if ('serviceWorker' in navigator) {
-      const swCode = `
-        const CACHE_NAME = 'paymaster-v8.3';
-        const ASSETS = ['./', './index.html'];
-        self.addEventListener('install', (event) => {
-          event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS).catch(() => {})));
-          self.skipWaiting();
-        });
-        self.addEventListener('activate', (event) => {
-          event.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))));
-          self.clients.claim();
-        });
-        self.addEventListener('fetch', (event) => {
-          if (event.request.method !== 'GET') return;
-          event.respondWith(
-            caches.match(event.request).then((cached) => cached || fetch(event.request).then((response) => {
-              if (!response || response.status !== 200 || response.type === 'opaque') return response;
-              const responseClone = response.clone();
-              caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone));
-              return response;
-            }).catch(() => cached))
-          );
-        });
-      `;
-      try {
-        const blob = new Blob([swCode], { type: 'application/javascript' });
-        const swUrl = URL.createObjectURL(blob);
-        navigator.serviceWorker.register(swUrl, { scope: './' })
-          .then((reg) => console.log('SW registered:', reg.scope))
-          .catch((err) => console.log('SW failed:', err));
-      } catch (e) { console.log('SW error:', e); }
-    }
-
-    // =====================================================================
     //  EVENTS
     // =====================================================================
     function bindEvents() {
-      // Debounced preview update
       const debouncedPreview = debounce(updatePreviewForCurrent, 50);
       totalHireAmountInput.addEventListener('input', () => {
         debouncedPreview();
@@ -4117,14 +4045,10 @@
       updateStickyHeader();
       coffeeNumberDisplay.textContent = MOMO_NUMBER;
 
-      // Floating icon preferences
       applyFloatingPrefs();
-
-      // Track referral visit
       trackReferralVisit();
       updateReferralStats();
 
-      // Flyer logic (reduced frequency for performance)
       const appOpens = parseInt(localStorage.getItem('pmAppOpens') || '0');
       const newOpen = appOpens + 1;
       localStorage.setItem('pmAppOpens', String(newOpen));
@@ -4132,20 +4056,17 @@
       const showRandomFlyer = newOpen > 0 && newOpen % 7 === 0;
       if (isFirstOpen || showRandomFlyer) {
         setTimeout(() => {
-          const randomIndex = Math.floor(Math.random() * FLYERS.length);
-          openFlyerCarousel(randomIndex);
+          openFlyerCarousel(Math.floor(Math.random() * FLYERS.length));
         }, 1200);
       }
       if (Object.keys(agreements).length === 0) welcomeModal.classList.add('active');
 
-      // Handle shortcut URLs
       try {
         const params = new URLSearchParams(window.location.search);
         const section = params.get('section');
         if (section) switchSection(section);
       } catch (e) {}
     }
-
     function safeInitMainApp() { try { initMainApp(); } catch (e) { console.error(e); hideLoader(); } }
 
     let mainInitialized = false;
@@ -4153,34 +4074,19 @@
     hideLockScreen = function() {
       _hideLockOriginal();
       if (!mainInitialized) { mainInitialized = true; hideLoader(); safeInitMainApp(); }
-    };
-
-    // Apply standalone mode + install prompt flow
-    applyStandaloneMode();
-
-    // If already unlocked, show install overlay for browser users
-    setTimeout(() => {
-      if (!isStandalone() && !localStorage.getItem('pmInstallSkipped')) {
-        // Show overlay after lock screen (if no password) or after unlocking
-        if (!storedPassword && _appUnlocked) showInstallOverlay();
-      }
-    }, 2000);
-
-    if (storedPassword) { showLockScreen(false); } else { showLockScreen(true); }
-    document.getElementById('passwordInput').addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') handlePasswordSubmit();
-    });
-
-    // After unlock, if not standalone, show install overlay
-    const _hideLockOriginal2 = hideLockScreen;
-    hideLockScreen = function() {
-      _hideLockOriginal2();    
       setTimeout(() => {
         if (!isStandalone() && !localStorage.getItem('pmInstallSkipped')) {
           showInstallOverlay();
         }
       }, 1200);
     };
+
+    applyStandaloneMode();
+
+    if (storedPassword) { showLockScreen(false); } else { showLockScreen(true); }
+    document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') handlePasswordSubmit();
+    });
   </script>
 </body>
 </html>
